@@ -14,10 +14,13 @@ use App\Http\Controllers\FornecedorController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
+//Route::get('/', function () {
+ //   return view('home');
+//});
 
 
-Route::get('/fornecedores', [FornecedorController::class, 'index']);
+Route::get('/', [FornecedorController::class, 'show']);
+
+
+Route::get('/criar-fornecedor', [FornecedorController::class, 'store']);
 

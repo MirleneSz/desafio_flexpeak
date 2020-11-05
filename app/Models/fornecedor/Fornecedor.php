@@ -10,12 +10,8 @@ class Fornecedor extends Model
     use HasFactory;
 
     protected $fillable = ['nome','endereco','telefone'];
-    protected $guarded = ['id', 'created_at', 'update_at'];
+    protected $table = "fornecedor";
 
-    public function getAll()
-    {
-        $this->all();
 
-    }
 
 }

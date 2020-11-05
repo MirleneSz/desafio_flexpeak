@@ -3,24 +3,30 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\fornecedor\Fornecedor;
+use App\Models\Fornecedor\Fornecedor;
 
 class FornecedorController extends Controller
 {
 
-
     public function index()
     {
-        dd('test');
-        $fornecedor = new Fornecedor();
-        return view('home', ['fornecedores'=>$fornecedor->getAll()]);
-
-
+        return view('fornecedor.index');
     }
+
 
     public function store(Request $request )
     {
 
     }
+
+    public function show()
+    {
+        $fornecedor = new Fornecedor();
+        //  return ($fornecedor->all());
+        return view('home')->with(['fornecedores'=>$fornecedor->all()]);
+
+
+    }
+
 
 }

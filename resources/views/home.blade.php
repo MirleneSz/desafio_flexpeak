@@ -8,5 +8,10 @@
 </head>
 <body>
        <h1> test </h1>
+
+      <ul> @foreach ($fornecedores as $item)
+        <li>$item</li>
+
+      @endforeach</ul>
 </body>
 </html>
