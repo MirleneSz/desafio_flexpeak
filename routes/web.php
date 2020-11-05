@@ -3,6 +3,7 @@
 use App\Http\Controllers\ClienteController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\FornecedorController;
+use App\Http\Controllers\PlanoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,8 @@ Route::get('/', [FornecedorController::class, 'show']);
 
 Route::get('/', [ClienteController::class, 'show']);
 
+Route::get('/', [PlanoController::class, 'show']);
+
 
 
 Route::post('/criar-fornecedor', [FornecedorController::class, 'store'])->name('create-fornecedor');
@@ -34,3 +37,7 @@ Route::get('/fornecedores', [FornecedorController::class, 'index'])->name('home.
 Route::post('/criar-cliente',[ClienteController::class,'store'])->name('create-cliente');
 
 Route::get('/clientes', [ClienteController::class, 'index'])->name('home.cliente');
+
+Route::post('criar-plano', [PlanoController::class,'store'])->name('create-plano');
+
+Route::get('/planos', [PlanoController::class,'index'])->name('home.plano');
