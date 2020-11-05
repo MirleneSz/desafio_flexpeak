@@ -17,10 +17,10 @@ class CreateCustoTable extends Migration
             $table->bigIncrements('id');
             $table->string('descricao')->nullable(false);
             $table->float('valor')->nullable(false);
-            $table->bigInteger('fonecedor_id')->nullable(false);
+            $table->bigInteger('fornecedor_id')->unsigned();
 
 
-            $table->foreign('fonecedor_id')
+            $table->foreign('fornecedor_id')
                 ->references('id')->on('fornecedor')
                 ->onDelete('cascade');
 

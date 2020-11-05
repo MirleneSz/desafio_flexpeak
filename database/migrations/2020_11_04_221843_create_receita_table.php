@@ -17,7 +17,7 @@ class CreateReceitaTable extends Migration
             $table->bigIncrements('id');
             $table->string('descricao')->nullable(false);
             $table->float('valor')->nullable(false);
-            $table->bigInteger('receita_id')->nullable(false);
+            $table->bigInteger('receita_id')->unsigned();
 
 
             $table->foreign('receita_id')

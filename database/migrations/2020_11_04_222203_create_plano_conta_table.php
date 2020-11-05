@@ -17,8 +17,8 @@ class CreatePlanoContaTable extends Migration
             $table->bigIncrements('id');
             $table->string('nome_conta')->nullable(false);
             $table->date('data_pagamento')->nullable(false);
-            $table->bigInteger('fornecedor_id')->nullable(false);
-            $table->bigInteger('receita_id')->nullable(false);
+            $table->bigInteger('fornecedor_id')->unsigned();
+            $table->bigInteger('receita_id')->unsigned();
 
             $table->foreign('fornecedor_id')
             ->references('id')->on('fornecedor')
