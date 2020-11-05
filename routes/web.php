@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FornecedorController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,5 +19,5 @@ Route::get('/', function () {
 });
 
 
-Route::get('/fornecedores', 'FornecedorController@index')->name('lista_fornecedores');
+Route::get('/fornecedores', [FornecedorController::class, 'index']);
 
