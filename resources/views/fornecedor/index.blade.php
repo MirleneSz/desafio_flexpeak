@@ -14,5 +14,10 @@
 
         <button type="submit">Cadastrar</button>
     </form>
+
+    <ul> @foreach ($fornecedores as $item)
+        <li>$item</li>
+
+      @endforeach</ul>
 </body>
 </html>
