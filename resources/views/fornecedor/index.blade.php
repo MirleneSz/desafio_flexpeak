@@ -7,7 +7,8 @@
     <title>Cadastro</title>
 </head>
 <body>
-    <form action ="" method="POST">
+<form action ="{{route('create-fornecedor')}}" method="POST">
+    @csrf
         <input type="text" name="nome" id="">
         <input type="text" name="endereco" id="">
         <input type="tel" name="telefone" id="">
@@ -15,8 +16,12 @@
         <button type="submit">Cadastrar</button>
     </form>
 
+    @if(session('success'))
+    <h1>{{session('success')}}</h1>
+    @endif
+
     <ul> @foreach ($fornecedores as $item)
-        <li>$item</li>
+        <li>{{$item->nome}}</li>
 
       @endforeach</ul>
 </body>

@@ -22,8 +22,8 @@ use App\Http\Controllers\FornecedorController;
 Route::get('/', [FornecedorController::class, 'show']);
 
 
-Route::get('/criar-fornecedor', [FornecedorController::class, 'store']);
+Route::post('/criar-fornecedor', [FornecedorController::class, 'store'])->name('create-fornecedor');
 
 
-Route::get('/fornecedores', [FornecedorController::class, 'index']);
+Route::get('/fornecedores', [FornecedorController::class, 'index'])->name('home.fornecedor');
 
