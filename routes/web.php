@@ -24,3 +24,6 @@ Route::get('/', [FornecedorController::class, 'show']);
 
 Route::get('/criar-fornecedor', [FornecedorController::class, 'store']);
 
+
+Route::get('/fornecedores', [FornecedorController::class, 'index']);
+
