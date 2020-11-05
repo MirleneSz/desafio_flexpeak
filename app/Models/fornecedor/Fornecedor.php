@@ -12,6 +12,4 @@ class Fornecedor extends Model
     protected $fillable = ['nome','endereco','telefone'];
     protected $table = "fornecedor";
 
-
-
 }
