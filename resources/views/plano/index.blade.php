@@ -11,23 +11,54 @@
     @csrf
         <input type="text" name="nome_conta" id="">
         <input type="date" name="data_pagamento" id="">
-        <input type="number" name="fornecedor_id" id="">
-        <input type="number" name="receita_id" id="">
 
-        <button type="submit">Cadastrar</button>
-    </form>
 
-    @if(session('success'))
-    <h1>{{session('success')}}</h1>
-    @endif
+        <label for="">Custo</label>
 
-    <ul> @foreach ($planos as $item)
-        <li>{{$item->nome}}</li>
+        <select class="custom-select" name="custo_id" id="custo">
+            <option selected>Choose...</option>
 
-      @endforeach
+            @foreach ($custos as $item)
+
+            <option value="{{$item->id}}">{{$item->descricao}}</option>
+
+            @endforeach
+
+        </select>
+        <!--<button type="submit">Cadastrar</button>!-->
+
+
+      <label for="">Receita</label>
+
+      <select class="custom-select" name="receita_id" id="receita">
+          <option selected>Choose...</option>
+
+          @foreach ($receitas as $item)
+
+          <option value="{{$item->id}}">{{$item->descricao}}</option>
+
+          @endforeach
+
+      </select>
+
+      <button type="submit">Cadastrar</button>
+
+  </form>
+
+  @if(session('success'))
+  <h1>{{session('success')}}</h1>
+  @endif
+
+  <ul> @foreach ($planos as $item)
+      <li>{{$item->nome_conta}}</li>
+
+    @endforeach
     </ul>
 
-      <select class="custom-select" id="custo">
+</body>
+</html>
+
+     <!-- <select class="custom-select" id="receita">
         <option selected>Choose...</option>
 
         @foreach ($custos as $item)
@@ -48,4 +79,4 @@
 
 
 </body>
-</html>
+</html>!-->

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Custo\Custo;
-use App\Models\receita\Receita;
+use App\Models\fornecedor\Fornecedor;
 
 class CustoController extends Controller
 {
@@ -12,10 +12,10 @@ class CustoController extends Controller
     {
 
         $custo = new Custo();
-        $receitas = new Receita();
+        $fornecedores = new Fornecedor();
 
         //  return ($custo->all());
-        return view('custo.index')->with(['custos'=>$custo->all(), 'receitas'=>$receitas->all()]);
+        return view('custo.index')->with(['custos'=>$custo->all(), 'fornecedores'=>$fornecedores->all()]);
     }
 
 

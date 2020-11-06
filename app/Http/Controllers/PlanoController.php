@@ -26,7 +26,14 @@ class PlanoController extends Controller
 
         $plano = new Plano();
 
-        $insert = $plano->create($collection->all());
+        $insert = $plano->create([
+            'nome_conta'=>$collection['nome_conta'],
+            'data_pagamento'=>$collection['data_pagamento'],
+            'custo_id'=>$collection['custo_id'],
+            'receita_id'=>$collection['receita_id'],
+
+        ]);
+        $insert->save();
 
         if ($insert) {
             return redirect()->route('home.plano')

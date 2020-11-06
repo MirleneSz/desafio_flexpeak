@@ -9,6 +9,6 @@ class Plano extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nome_conta','data_pagamento','fornecedor_id','receita_id'];
+    protected $fillable = ['nome_conta','data_pagamento','custo_id','receita_id'];
     protected $table = "plano_conta";
 }
