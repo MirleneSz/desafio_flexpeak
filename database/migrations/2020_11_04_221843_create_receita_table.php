@@ -17,11 +17,11 @@ class CreateReceitaTable extends Migration
             $table->bigIncrements('id');
             $table->string('descricao')->nullable(false);
             $table->float('valor')->nullable(false);
-            $table->bigInteger('receita_id')->unsigned();
+            $table->bigInteger('cliente_id')->unsigned();
 
 
-            $table->foreign('receita_id')
-                ->references('id')->on('receita')
+            $table->foreign('cliente_id')
+                ->references('id')->on('cliente')
                 ->onDelete('cascade');
 
             $table->timestamps();

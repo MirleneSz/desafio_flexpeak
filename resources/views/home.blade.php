@@ -26,5 +26,16 @@
             <li>$item</li>
 
             @endforeach</ul>
+
+            <ul> @foreach ($receitas as $item)
+                <li>$item</li>
+
+             @endforeach</ul>
+
+             <ul> @foreach ($custos as $item)
+                <li>$item</li>
+
+             @endforeach</ul>
+</body>
 </body>
 </html>

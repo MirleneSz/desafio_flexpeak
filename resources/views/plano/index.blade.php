@@ -24,7 +24,28 @@
     <ul> @foreach ($planos as $item)
         <li>{{$item->nome}}</li>
 
-      @endforeach</ul>
+      @endforeach
+    </ul>
+
+      <select class="custom-select" id="custo">
+        <option selected>Choose...</option>
+
+        @foreach ($custos as $item)
+
+      <option value="{{$item->id}}">{{$item->nome}}</option>
+        @endforeach
+
+      </select>
+
+      <select class="custom-select" id="receita">
+        <option selected>Choose...</option>
+        @foreach ($receitas as $item)
+
+        <option value="{{$item->id}}">{{$item->nome}}</option>
+          @endforeach
+      </select>
+
+
 
 </body>
 </html>

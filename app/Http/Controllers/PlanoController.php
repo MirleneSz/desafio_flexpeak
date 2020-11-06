@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Plano\Plano;
+use App\Models\custo\Custo;
+use App\Models\receita\Receita;
 
 class PlanoController extends Controller
 {
@@ -11,9 +13,11 @@ class PlanoController extends Controller
     {
 
         $plano = new Plano();
+        $custos = new Custo();
+        $receitas = new Receita();
 
         //  return ($plano->all());
-        return view('plano.index')->with(['planos'=>$plano->all()]);
+        return view('plano.index')->with(['planos'=>$plano->all(),'custos'=>$custos->all(),'receitas'=>$receitas->all()]);
     }
 
     public function store(Request $request )
