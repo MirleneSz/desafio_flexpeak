@@ -51,5 +51,3 @@ Route::get('/receitas', [ReceitaController::class, 'index'])->name('home.receita
 
 Route::post('/criar-custo', [CustoController::class, 'store'])->name('create-custo');
 Route::get('/custos', [CustoController::class, 'index'])->name('home.custo');
-
-

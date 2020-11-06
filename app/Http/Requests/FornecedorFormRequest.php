@@ -13,7 +13,7 @@ class FornecedorFormRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,9 @@ class FornecedorFormRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nome'=>'required'|'max:45',
+            'endereco'=>'max:45',
+            'telefone'=>'max:45'
         ];
     }
 }
