@@ -25,13 +25,7 @@
 
           <header class="main-header">
 
-            <!-- Logo -->
-            <a href="index2.html" class="logo">
-              <!-- mini logo for sidebar mini 50x50 pixels -->
-              <span class="logo-mini"><b></b>V</span>
-              <!-- logo for regular state and mobile devices -->
-              <span class="logo-lg"><b></b></span>
-            </a>
+
 
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">
@@ -39,34 +33,7 @@
               <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
                 <span class="sr-only"></span>
               </a>
-              <!-- Navbar Right Menu -->
-              <div class="navbar-custom-menu">
-                <ul class="nav navbar-nav">
-                  <!-- Messages: style can be found in dropdown.less-->
-
-                  <!-- User Account: style can be found in dropdown.less -->
-                  <li class="dropdown user user-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-
-                      <span class="hidden-xs"></span>
-                    </a>
-                    <ul class="dropdown-menu">
-                      <!-- User image -->
-
-                      <!-- Menu Footer-->
-                      <li class="user-footer">
-
-                        <div class="pull-right">
-                          <a href="#" class="btn btn-default btn-flat">Fechar</a>
-                        </div>
-                      </li>
-                    </ul>
-                  </li>
-
-                </ul>
-              </div>
-
-            </nav>
+     </nav>
           </header>
           <!-- Left side column. contains the logo and sidebar -->
           <aside class="main-sidebar">
@@ -80,12 +47,12 @@
 
                 <li class="treeview">
                   <a href="#">
-                    <i class="fa fa-laptop"></i>
-                    <span>fluxo</span>
+                    <i class=""></i>
+                    <span>Fornecedor</span>
                     <i class="fa fa-angle-left pull-right"></i>
                   </a>
                   <ul class="treeview-menu">
-                    <li><a href="/fornecedores"><i class="fa fa-circle-o"></i> Fornecedor</a></li>
+                    <li><a href="/fornecedores"><i class="fa fa-circle-o"></i> Fornecedores</a></li>
 
                   </ul>
 
@@ -95,52 +62,45 @@
 
                 <li class="treeview">
                   <a href="#">
-                    <i class="fa fa-th"></i>
+                    <i class=""></i>
                     <span>Cliente</span>
                      <i class="fa fa-angle-left pull-right"></i>
                   </a>
                   <ul class="treeview-menu">
-                    <li><a href="compras/fornecedor"><i class="fa fa-circle-o"></i> Clientes</a></li>
+                    <li><a href="/clientes"><i class="fa fa-circle-o"></i> Clientes</a></li>
                   </ul>
                 </li>
                 <li class="treeview">
                   <a href="#">
-                    <i class="fa fa-shopping-cart"></i>
+                    <i class=""></i>
                     <span>Custo</span>
                      <i class="fa fa-angle-left pull-right"></i>
                   </a>
                   <ul class="treeview-menu">
-                    <li><a href="vendas/venda"><i class="fa fa-circle-o"></i> Custos</a></li>
+                    <li><a href="/custos"><i class="fa fa-circle-o"></i> Custos</a></li>
                   </ul>
                 </li>
 
                 <li class="treeview">
                     <a href="#">
-                      <i class="fa fa-shopping-cart"></i>
+                      <i class=""></i>
                       <span>Receita</span>
                        <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                      <li><a href="vendas/venda"><i class="fa fa-circle-o"></i> Receitas</a></li>
+                      <li><a href="/receitas"><i class="fa fa-circle-o"></i> Receitas</a></li>
                     </ul>
                   </li>
 
                   <li class="treeview">
                     <a href="#">
-                      <i class="fa fa-shopping-cart"></i>
+                      <i class=""></i>
                       <span>Plano de Custo</span>
                        <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                      <li><a href="vendas/venda"><i class="fa fa-circle-o"></i> Planos</a></li>
+                      <li><a href="/planos"><i class="fa fa-circle-o"></i> Planos</a></li>
                     </ul>
-                  </li>
-
-                 <li>
-                  <a href="#">
-                    <i class="fa fa-plus-square"></i> <span>Ajuda</span>
-                    <small class="label pull-right bg-red">PDF</small>
-                  </a>
                 </li>
 
 

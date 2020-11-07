@@ -55,7 +55,7 @@
                             <td>{{ $for->endereco}}</td>
                             <td>{{ $for->telefone}}</td>
 
-                            <td>
+
                         </tr>
                         @endforeach
                     </table>
