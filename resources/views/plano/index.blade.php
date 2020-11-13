@@ -33,7 +33,6 @@
             @endforeach
 
         </select>
-        <!--<button type="submit">Cadastrar</button>!-->
 
 
       <label for="">Receita</label>
