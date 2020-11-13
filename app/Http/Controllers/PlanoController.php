@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Plano\Plano;
 use App\Models\custo\Custo;
 use App\Models\receita\Receita;
+use RealRashid\SweetAlert\Facades\Alert;
+
 
 class PlanoController extends Controller
 {
@@ -16,12 +18,16 @@ class PlanoController extends Controller
         $custos = new Custo();
         $receitas = new Receita();
 
-        //  return ($plano->all());
+
+        // return ($plano->all());
         return view('plano.index')->with(['planos'=>$plano->all(),'custos'=>$custos->all(),'receitas'=>$receitas->all()]);
     }
 
     public function store(Request $request )
     {
+
+      // return $request;
+
         $collection=collect($request->all())->except('_token');
 
         $plano = new Plano();
@@ -29,15 +35,20 @@ class PlanoController extends Controller
         $insert = $plano->create([
             'nome_conta'=>$collection['nome_conta'],
             'data_pagamento'=>$collection['data_pagamento'],
-            'custo_id'=>$collection['custo_id'],
-            'receita_id'=>$collection['receita_id'],
+            'receita_valor'=>$collection['receita_valor'],
+            'custo_valor'=>$collection['custo_valor'],
+            'saldo'=>$collection['saldo'],
+
+
 
         ]);
         $insert->save();
 
         if ($insert) {
-            return redirect()->route('home.plano')
-             ->with('success', 'Plano inserido com sucesso!');
+
+            Alert::success('Success', 'Plano inserido com sucesso!');
+            return redirect()->route('home.plano');
+            // ->alert('success', 'Plano inserido com sucesso!');
         }
 
     }
@@ -45,9 +56,17 @@ class PlanoController extends Controller
     public function show()
     {
         $plano = new Plano();
-        //  return ($plano->all());
-        return view('home')->with(['planos'=>$plano->all()]);
+         // dd ($plano->all());
+       return view('home')->with(['planos'=>$plano->all()]);
 
+
+
+    }
+
+    public  function saldo($receita, $custo)
+    {
+        $saldo = ($receita-$custo);
+        return ($saldo);
     }
 
 }

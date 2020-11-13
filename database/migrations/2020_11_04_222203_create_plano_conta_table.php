@@ -17,15 +17,15 @@ class CreatePlanoContaTable extends Migration
             $table->bigIncrements('id');
             $table->string('nome_conta')->nullable(false);
             $table->date('data_pagamento')->nullable(false);
-            $table->bigInteger('custo_id')->unsigned();
-            $table->bigInteger('receita_id')->unsigned();
+            $table->bigInteger('custo_valor')->unsigned();
+            $table->bigInteger('receita_valor')->unsigned();
 
-            $table->foreign('custo_id')
-            ->references('id')->on('custo')
+            $table->foreign('custo_valor')
+            ->references('valor')->on('custo')
             ->onDelete('cascade');
 
-            $table->foreign('receita_id')
-            ->references('id')->on('receita')
+            $table->foreign('receita_valor')
+            ->references('valor')->on('receita')
             ->onDelete('cascade');
 
             $table->timestamps();
